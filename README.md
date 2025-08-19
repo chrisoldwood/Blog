@@ -1,6 +1,6 @@
 # Blog
 
-Markdown based archive of <chrisoldwood.blogspot.co.uk>.
+Markdown based archive of [chrisoldwood.blogspot.co.uk](chrisoldwood.blogspot.co.uk).
 
 ### 2009
 
