@@ -31,13 +31,16 @@ function WriteContent([string] $content) {
 }
 
 function BodyToMarkdown([string] $body) {
-    $body = $body -replace '<span[^>]*>', ''
-    $body = $body -replace '</span>', ''
+    $body = $body -replace '</?span[^>]*>', ''
 
     $body = $body -replace '<br>', "`n"
 
+    $body = $body -replace '</?em>', '_'
     $body = $body -replace '<a href="([^"]+)"[^>]*>(.*?)</a>', '[$2]($1)'
 
+    $body = $body -replace '&amp;', '&'
+
+    # Remove trailing <div style="clear: both;"></div>
     $body = $body -replace '<div[^>]*>', ''
     $body = $body -replace '</div>', ''
 
