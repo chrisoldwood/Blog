@@ -9,5 +9,5 @@ The reason I was aware of F# was because I had read an article about it in [MSDN
 I've never studied or done any Functional Programming, but this was a key theme at last years [ACCU Conference [2008]](http://accu.org/index.php/conferences/accu_conference_2008), and the change in hardware due to multiple-cores and NUMA architectures has prompted quite a bit of discussion around the mutability of data and it's effects on scalability. Also in this months [C Vu](http://accu.org/index.php/aboutus/aboutjournals) magazine [ACCU], Andrei Alexandrescu in his article "The Case for D", touches quite a bit on this subject and explains the FP aspects of D which look very interesting. It looks like I can't ignore this area of Computer Science any longer.
 
 
-
+---
 Published: Thursday, 28 May 2009 at 15:57

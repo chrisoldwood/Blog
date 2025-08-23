@@ -50,5 +50,5 @@ function BodyToMarkdown([string] $body) {
 WriteContent "# $title"
 WriteContent ''
 WriteContent (BodyToMarkdown $body)
-WriteContent ''
+WriteContent '---'
 WriteContent "Published: $date at $time"
