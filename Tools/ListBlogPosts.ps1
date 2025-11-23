@@ -45,7 +45,7 @@ $pages | foreach {
     if ($AsConfig) {
         $date = & { $_ -match '/(\d{4}/\d{2})/' | Out-Null; $Matches[1] }
         $title = & { $_ -match '/([a-z0-9-]+).html$' | Out-Null; $Matches[1] }
-        "    @{{ Date = '{0}'; Input='{1}.html'; Output='{1}.md' }}" -f $date,$title
+        "    @{{ InputDate = '{0}'; InputUrl='{1}.html'; OutputDate = '{0}'; OutputFile='{1}.md' }}" -f $date,$title
     } else {
         $_
     }

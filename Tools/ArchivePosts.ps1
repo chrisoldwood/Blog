@@ -2,15 +2,19 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 $posts = @(
-    @{ Date = '2009/04'; Input='apology-to-raymond-chen.html'; Output='an-apology-to-raymond-chen.md' }
-    @{ Date = '2009/05'; Input='who-is-accu.html'; Output='who-is-the-accu.md' }
-    @{ Date = '2009/05'; Input='potted-history-of-my-windows-framework.html'; Output='potted-history-of-my-windows-framework.md' }
-    @{ Date = '2009/05'; Input='bcs-talk-introduction-to-f.html'; Output='bcs-talk-introduction-to-fsharp.md' }
+    @{ InputDate = '2009/04'; InputUrl='apology-to-raymond-chen.html'; OutputDate = '2009/04'; OutputFile='an-apology-to-raymond-chen.md' }
+    @{ InputDate = '2009/05'; InputUrl='who-is-accu.html'; OutputDate = '2009/05'; OutputFile='who-is-the-accu.md' }
+    @{ InputDate = '2009/05'; InputUrl='potted-history-of-my-windows-framework.html'; OutputDate = '2009/05'; OutputFile='potted-history-of-my-windows-framework.md' }
+    @{ InputDate = '2009/05'; InputUrl='bcs-talk-introduction-to-f.html'; OutputDate = '2009/05'; OutputFile='bcs-talk-introduction-to-fsharp.md' }
 )
 
 $baseUrl = 'https://chrisoldwood.blogspot.com'
 
 $posts | ForEach-Object {
-    Write-Host "Archiving '$($_.Date)/$($_.Input)' as '$($_.Date)/$($_.Output)'"
-    .\Tools\BlogPostToMarkdown.ps1 "$baseUrl/$($_.Date)/$($_.Input)" "$($_.Date)/$($_.Output)"
+    $inputUrl = "$($_.InputDate)/$($_.InputUrl)"
+    $outputPath = "$($_.OutputDate)/$($_.OutputFile)"
+
+    Write-Host "Archiving '$inputUrl' as '$outputPath'"
+    if (!(Test-Path $_.OutputDate)) { mkdir $_.OutputDate | Out-Null }
+    .\Tools\BlogPostToMarkdown.ps1 "$baseUrl/$inputUrl" "$outputPath"
 }
