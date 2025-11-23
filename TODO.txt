@@ -5,3 +5,5 @@
 - Handle images.
 
 - Generate the README Table of Contents.
+
+- Handle ordered and unordered lists properly.

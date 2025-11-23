@@ -36,14 +36,33 @@ function WriteContent([string] $content) {
 }
 
 function BodyToMarkdown([string] $body) {
-    $body = $body -replace '</?span[^>]*>', ''
-
     $body = $body -replace '<br>', "`r`n"
 
+    $body = $body -replace '</?strong>', '**'
     $body = $body -replace '</?em>', '_'
     $body = $body -replace '<a href="([^"]+)"[^>]*>(.*?)</a>', '[$2]($1)'
 
     $body = $body -replace '&amp;', '&'
+    $body = $body -replace '&gt;', '>'
+    $body = $body -replace '&lt;', '<'
+
+    $body = $body -replace '<ol>', "`r`n"
+    $body = $body -replace '<li>', '- '
+    $body = $body -replace '</li>', "`r`n"
+    $body = $body -replace '</ol>', "`r`n"
+
+    # Handle monospaced text.
+    $body = $body -replace '<span style="font-family:courier new;">(.+)(.*?)</span>', '`$1`\'
+
+    # Ignore weird spans.
+    $body = $body -replace '<span class="blsp-spelling-error" id="SPELLING_ERROR_[0-9]+">', ''
+    $body = $body -replace '<span class="blsp-spelling-corrected" id="SPELLING_ERROR_[0-9]+">', ''
+
+    # Remove default text style.
+    $body = $body -replace '<span>', ''
+    $body = $body -replace '<span style="font-family:trebuchet ms;">', ''
+    $body = $body -replace '<span style="font-family:verdana;">', ''
+    $body = $body -replace '</span>', ''
 
     # Remove trailing <div style="clear: both;"></div>
     $body = $body -replace '<div[^>]*>', ''
