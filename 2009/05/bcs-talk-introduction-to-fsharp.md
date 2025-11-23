@@ -11,3 +11,4 @@ I've never studied or done any Functional Programming, but this was a key theme 
 
 ---
 Published: Thursday, 28 May 2009 at 15:57
+Labels: BCS

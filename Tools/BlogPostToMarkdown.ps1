@@ -17,6 +17,11 @@ $title = $dom.QuerySelector('.post-title').TextContent.Trim()
 $body = $dom.QuerySelectorAll('.post-body').InnerHtml.Trim()
 $date = $dom.QuerySelectorAll('.date-header').TextContent.Trim()
 $time = $dom.QuerySelectorAll('.published').TextContent.Trim()
+$labels = $dom.QuerySelectorAll('.post-labels') | foreach {
+        $_.QuerySelectorAll('a') | foreach {
+        $_.TextContent.Trim()
+    }
+}
 
 if (Test-Path $OutputFile) {
     Remove-Item $OutputFile -Force
@@ -52,3 +57,4 @@ WriteContent ''
 WriteContent (BodyToMarkdown $body)
 WriteContent '---'
 WriteContent "Published: $date at $time"
+WriteContent "Labels: $($labels -join ', ')"
