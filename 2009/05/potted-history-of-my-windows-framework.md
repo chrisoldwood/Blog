@@ -23,5 +23,5 @@ The changes are not just in the code, but also in the way I develop it. I have w
 So, is it worth it? I've always viewed my framework as a playground - somewhere outside of work to play around and make mistakes - but more importantly to try out new things that I hope can then be fed back into my professional career to make me more valuable to a potential employer. I'm still learning heaps every time I refactor, so I guess it is :-)
 
 ---
-Published: Monday, 18 May 2009 at 15:49
+Published: Monday, 18 May 2009 at 15:49\
 Labels: history

@@ -56,5 +56,5 @@ WriteContent "# $title"
 WriteContent ''
 WriteContent (BodyToMarkdown $body)
 WriteContent '---'
-WriteContent "Published: $date at $time"
+WriteContent "Published: $date at $time\"
 WriteContent "Labels: $($labels -join ', ')"
