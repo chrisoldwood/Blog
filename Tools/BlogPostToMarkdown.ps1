@@ -38,7 +38,7 @@ function WriteContent([string] $content) {
 function BodyToMarkdown([string] $body) {
     $body = $body -replace '</?span[^>]*>', ''
 
-    $body = $body -replace '<br>', "`n"
+    $body = $body -replace '<br>', "`r`n"
 
     $body = $body -replace '</?em>', '_'
     $body = $body -replace '<a href="([^"]+)"[^>]*>(.*?)</a>', '[$2]($1)'
