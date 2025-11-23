@@ -27,7 +27,7 @@ function Reverse
     $array
 }
 
-$pages = $history | sort | select -First 2 | foreach {
+$pages = $history | sort | select -First 3 | foreach {
     $dom = ConvertFrom-Html -Engine AngleSharp -Url $_
     $links = $dom.QuerySelectorAll('.archivedate .expanded') | foreach {
         $_.QuerySelectorAll('.posts') | foreach {
