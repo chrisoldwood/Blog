@@ -5,11 +5,11 @@ $ErrorActionPreference = 'Stop'
 
 $baseUrl = 'https://chrisoldwood.blogspot.com'
 
-$Posts | ForEach-Object {
+$Posts | foreach {
     $inputUrl = "$($_.InputDate)/$($_.InputUrl)"
     $outputPath = "$($_.OutputDate)/$($_.OutputFile)"
 
-    Write-Host "Archiving '$inputUrl' as '$outputPath'"
+    Write-Information "Archiving '$inputUrl' as '$outputPath'" -InformationAction Continue
     if (!(Test-Path $_.OutputDate)) { mkdir $_.OutputDate | Out-Null }
     .\Tools\BlogPostToMarkdown.ps1 "$baseUrl/$inputUrl" "$outputPath"
 }

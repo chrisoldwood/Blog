@@ -8,7 +8,7 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 If (-not (Get-Module -ErrorAction Ignore -ListAvailable PSParseHTML)) {
-  Write-Host "Installing PSParseHTML module for the current user..."
+  Write-Information "Installing PSParseHTML module for the current user..." -InformationAction Continue
   Install-Module -Scope CurrentUser PSParseHTML
 }
 
