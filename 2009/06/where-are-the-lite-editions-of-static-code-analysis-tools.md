@@ -15,5 +15,7 @@ One client I worked at lost many man days due to uninitialised member variables,
 Having the knowledge of certain products on my CV naturally helps make me more marketable, but more importantly, as a professional I feel I have another weapon in my arsenal to help ensure the quality of my code.
 
 ---
+Original: <https://chrisoldwood.blogspot.com/2009/06/where-are-lite-editions-of-static-code.html>\
+Copyright: Chris Oldwood 2009\
 Published: Tuesday, 30 June 2009 at 13:45\
 Labels: c++, code analysis

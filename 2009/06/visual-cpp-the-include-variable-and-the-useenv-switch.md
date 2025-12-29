@@ -48,5 +48,7 @@ I notice that it's also referenced in the following Microsoft Connect query, but
 I'll see if I can open a new issue and maybe more information about this will come to light.
 
 ---
+Original: <https://chrisoldwood.blogspot.com/2009/06/visual-c-include-variable-and-useenv.html>\
+Copyright: Chris Oldwood 2009\
 Published: Friday, 19 June 2009 at 11:03\
 Labels: visual c++

@@ -17,5 +17,7 @@ If you're still unsure that your £35 buys you excellent value for money, you ca
 See you soon on "accu-general"...
 
 ---
+Original: <https://chrisoldwood.blogspot.com/2009/05/who-is-accu.html>\
+Copyright: Chris Oldwood 2009\
 Published: Friday, 1 May 2009 at 10:13\
 Labels: ACCU, personal

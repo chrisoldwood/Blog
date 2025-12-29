@@ -9,5 +9,7 @@ I also wish to come clean and point out that I didn't really know which blogging
 The say "Imitation is the sincerest form of flattery", I only hope they see it that way :-)
 
 ---
+Original: <https://chrisoldwood.blogspot.com/2009/04/apology-to-raymond-chen.html>\
+Copyright: Chris Oldwood 2009\
 Published: Thursday, 30 April 2009 at 14:44\
 Labels: personal

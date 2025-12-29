@@ -6,5 +6,7 @@ The Release and Debug binaries are on my website [here](http://www.cix.co.uk/~go
 
 
 ---
+Original: <https://chrisoldwood.blogspot.com/2009/06/class-generator-v20-released.html>\
+Copyright: Chris Oldwood 2009\
 Published: Wednesday, 10 June 2009 at 20:38\
 Labels: release

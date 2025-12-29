@@ -47,5 +47,7 @@ The scripts are available [on my website here](http://www.cix.co.uk/~gort/win32.
 
 
 ---
+Original: <https://chrisoldwood.blogspot.com/2009/05/building-visual-c-projects-from-command.html>\
+Copyright: Chris Oldwood 2009\
 Published: Thursday, 18 June 2009 at 16:01\
 Labels: build, visual c++

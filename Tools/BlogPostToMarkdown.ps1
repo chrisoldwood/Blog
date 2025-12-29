@@ -75,5 +75,7 @@ WriteContent "# $title"
 WriteContent ''
 WriteContent (BodyToMarkdown $body)
 WriteContent '---'
+WriteContent "Original: <$URL>\"
+WriteContent "Copyright: Chris Oldwood $($URL -split '/' | select -Skip 3 -First 1)\"
 WriteContent "Published: $date at $time\"
 WriteContent "Labels: $($labels -join ', ')"

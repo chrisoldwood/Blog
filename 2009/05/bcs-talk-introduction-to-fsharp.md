@@ -10,5 +10,7 @@ I've never studied or done any Functional Programming, but this was a key theme 
 
 
 ---
+Original: <https://chrisoldwood.blogspot.com/2009/05/bcs-talk-introduction-to-f.html>\
+Copyright: Chris Oldwood 2009\
 Published: Thursday, 28 May 2009 at 15:57\
 Labels: BCS

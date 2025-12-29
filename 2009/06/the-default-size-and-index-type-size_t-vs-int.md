@@ -38,5 +38,7 @@ For now the possibly excessive use of size_t stays whilst I chew the fat. I also
 
 
 ---
+Original: <https://chrisoldwood.blogspot.com/2009/06/default-size-index-type-sizet-vs-int.html>\
+Copyright: Chris Oldwood 2009\
 Published: Monday, 22 June 2009 at 14:28\
 Labels: 64-bit windows, c++

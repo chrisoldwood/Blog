@@ -5,5 +5,7 @@ I've finally got around to releasing v1.0 of my tool for comparing Visual C++ pr
 The Release and Debug versions are already available and the source code will be released in a few days. The packages along with a screenshot and the manual are on my web site [here](http://www.cix.co.uk/~gort/win32.htm#VCProjCompare) in the Win32 section.
 
 ---
+Original: <https://chrisoldwood.blogspot.com/2009/06/visual-c-project-compare-v10-released.html>\
+Copyright: Chris Oldwood 2009\
 Published: Monday, 8 June 2009 at 20:08\
 Labels: release, visual c++
