@@ -4,8 +4,6 @@
 
 - Handle images.
 
-- Generate the README Table of Contents.
-
 - Handle ordered and unordered lists properly.
 
 - Add name and blog title on each page.
