@@ -1,0 +1,21 @@
+# Using Visual C++ Together With GCC - Some Alternatives
+
+[My last post](http://chrisoldwood.blogspot.com/2009/07/gcc-for-visually-c-impaired.html) described how I have started using GCC 4.4 to compile my codebase so that I gain a little more portability, but more importantly I get some extra static code analysis without spanking my wallet. My [Heath Robinson](http://en.wikipedia.org/wiki/W._Heath_Robinson)-esque solution involves using the free [Code::Blocks](http://www.codeblocks.org/) IDE as it can import Visual C++ projects and solutions with minimal fuss, they are easy to maintain, and it's only an extra .cbp and .workspace checked into the SCM repository - so it's not messy.
+
+As I mentioned before this was a suggestion from fellow ACCU member [Steve Love](http://www.arventech.com/), but since then I have had a some discussions on the [accu-general](http://accu.org/index.php/mailinglists) mailing list to see what alternatives there are...
+
+I guess the most obvious alternative would be [Eclipse + CDT (C/C++ Development Tooling)](http://www.eclipse.org/cdt) as this mirrors my current setup of an IDE + GCC. Given the volume of development in Eclipse it also probably makes the most sense, but I have not had a good experience with Eclipse or CDT in the past - probably because I've been spoilt by the simplicity of installing and using Visual C++. I recently tried the CDT 5.0.x release but once again got lost in the Eclipse menus trying to configure it for my MinGW installation. This was in stark contrast to Code::Blocks where I had it configured in minutes. I guess I shouldn't be surprised that the learning curve of a tool as powerful as Eclipse is going to be much steeper, but it's just too steep for my VC++ biased plan at the moment. I should also point out that I haven't even opened the manual, so cries of RTFM are entirely valid and I only have myself to blame.
+
+Both the Code::Blocks and Eclipse solutions rely on a separate IDE to manage the build process which is annoying because of the additional maintenance required to keep them in sync with the master Visual C++ projects. So, is there a way to drive GCC directly from the Visual Studio IDE?
+
+A little bit of Googling during my earlier research led to a tool called [gnu2msdev](http://www.xs4all.nl/~borkhuis/vxworks/vxw_pt1.html#1.13) that translates the output of GCC to the same format that CL produces so that the Visual Studio IDE can navigate to lines with compilation errors. From this I discovered a number of posts suggesting the use of a makefile project, but they were more about using Visual Studio as an expensive text editor rather than compiling the same source with two compilers. It feels like there might be something possible along these lines and I'm going to continue investigating in the background.
+
+I've never used the Intel C/C++ compiler, but another fellow ACCU member, [Anna-Jayne Metcalfe](http://www.riverblade.co.uk/people.html) of Riverblade, who knows a thing or two about integrating with Visual Studio, pointed out that Intel have managed the tight integration, so perhaps it would possible to do the same with GCC? I've looked at the MSDN documentation and it looks somewhat complicated for now :-) However, the signs are that it will be somewhat easier in the future as Microsoft have been slowly separating the IDE and build system so that it can support other languages and toolchains. The [VS Project Team Blog](http://blogs.msdn.com/vsproject/default.aspx) has a number of posts on the changes to [Visual Studio extensibility](http://blogs.msdn.com/vsproject/archive/2009/06/10/platform-extensibility-part-1.aspx) in VS2010 that show what they are up to.
+
+For the moment I'm sticking with the Code::Blocks approach, not least because the .cbp file format is simple and I reckon I could solve the sync'ing problem with a bit of script. However I'm still keen to get into Eclipse because there is so much development clout behind it. Hopefully by the time VS2010 becomes my baseline someone else would have already written the GCC integration and I'll get another free ride :-)
+
+---
+Original: <https://chrisoldwood.blogspot.com/2009/07/using-visual-c-together-with-gcc-some.html>\
+Copyright: Chris Oldwood 2009\
+Published: Tuesday, 14 July 2009 at 10:50\
+Labels: code analysis, visual c++

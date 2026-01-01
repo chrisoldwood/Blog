@@ -5,6 +5,11 @@ Markdown based archive of my Blogger hosted blog:
 
 ### 2009
 
+* [The Perils of Intellisense](2009/09/the-perils-of-intellisense.md)
+* [Going Back to Work](2009/09/going-back-to-work.md)
+* [My First Published Articles](2009/07/my-first-published-articles.md)
+* [Using Visual C++ Together With GCC - Some Alternatives](2009/07/using-visual-cpp-together-with-gcc.md)
+* [GCC for the Visually C++ Impaired](2009/07/gcc-for-the-visually-cpp-impaired.md)
 * [Where Are the "Lite" Editions of Static Code Analysis Tools?](2009/06/where-are-the-lite-editions-of-static-code-analysis-tools.md)
 * [The Default 'Size' & 'Index' Type: size_t vs int](2009/06/the-default-size-and-index-type-size_t-vs-int.md)
 * [Visual C++, the INCLUDE variable and the /USEENV switch](2009/06/visual-cpp-the-include-variable-and-the-useenv-switch.md)
