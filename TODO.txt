@@ -1,7 +1,3 @@
-- Handle basic formatting.
-
-- Handle monospace and code blocks.
-
 - Handle images.
 
 - Handle ordered and unordered lists properly.
@@ -9,3 +5,5 @@
 - Add name and blog title on each page.
 
 - Tweak Jekyll layout to fix heading.
+
+- Fix-up links to my own blog posts.

@@ -52,11 +52,16 @@ function BodyToMarkdown([string] $body) {
     $body = $body -replace '</ol>', "`r`n"
 
     # Handle monospaced text.
+    $body = $body -replace '<span style="font-family:courier new;"></span>', '` `\'
     $body = $body -replace '<span style="font-family:courier new;">(.+)(.*?)</span>', '`$1`\'
 
     # Ignore weird spans.
+    $body = $body -replace '<span style="font-size:[+]0;">', ''
     $body = $body -replace '<span class="blsp-spelling-error" id="SPELLING_ERROR_[0-9]+">', ''
     $body = $body -replace '<span class="blsp-spelling-corrected" id="SPELLING_ERROR_[0-9]+">', ''
+
+    # Remove coloured text.
+    $body = $body -replace '<span style="color:#[0-9a-fA-F]+;">', ''
 
     # Remove default text style.
     $body = $body -replace '<span>', ''
