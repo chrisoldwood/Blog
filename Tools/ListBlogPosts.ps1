@@ -2,10 +2,18 @@ param (
     [Parameter(Mandatory=$true, Position=0)]
     [string] $URL,
     [Parameter(Mandatory=$false)]
+    [string] $FromDate = '2000/01',
+    [Parameter(Mandatory=$false)]
+    [string] $ToDate = '3000/01',
+    [Parameter(Mandatory=$false)]
     [switch] $AsConfig
 )
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
+
+if ( ($FromDate -notmatch '^\d{4}/\d{2}$') -or ($ToDate -notmatch '^\d{4}/\d{2}$') ) {
+    Write-Error "-FromDate and -ToDate must be in the format 'YYYY/MM'."
+}
 
 If (-not (Get-Module -ErrorAction Ignore -ListAvailable PSParseHTML)) {
   Write-Information "Installing PSParseHTML module for the current user..."  -InformationAction Continue
@@ -27,7 +35,19 @@ function Reverse
     $array
 }
 
-$pages = $history | sort | select -First 3 | foreach {
+function DateFromUrl([string] $url)
+{
+    $url.Substring($url.Length-8, 7)
+}
+
+function InDateRange([string] $url, [string] $from, [string] $to)
+{
+    $date = DateFromUrl $_;
+
+    ($date -ge $from) -and ($date -lt $to)
+}
+
+$pages = $history | sort | where { InDateRange $_ $FromDate $ToDate } | foreach {
     $dom = ConvertFrom-Html -Engine AngleSharp -Url $_
     $links = $dom.QuerySelectorAll('.archivedate .expanded') | foreach {
         $_.QuerySelectorAll('.posts') | foreach {

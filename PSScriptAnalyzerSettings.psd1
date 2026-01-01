@@ -1,7 +1,10 @@
 @{
-    'Rules' = @{
-        'PSAvoidUsingCmdletAliases' = @{
-            'allowlist' = @('foreach', 'select', 'sort')
+    Rules = @{
+        PSAvoidUsingCmdletAliases = @{
+            AllowList = @('foreach', 'select', 'sort', 'where')
+        }
+        PSAvoidUsingPositionalParameters = @{
+            Enable = $false
         }
     }
 }
