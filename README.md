@@ -1,7 +1,8 @@
 # Blog: The OldWood Thing
 
-Markdown based archive of my Blogger hosted blog:
-[The OldWood Thing](https://chrisoldwood.blogspot.co.uk).
+Markdown based archive of my Blogger hosted blog
+[The OldWood Thing](https://chrisoldwood.blogspot.co.uk) using GitHub pages under
+https://chrisoldwood.github.io/Blog.
 
 ### 2009
 
