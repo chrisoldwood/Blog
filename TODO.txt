@@ -8,4 +8,6 @@
 
 - Investigate failed monospace matching in Perils of Intellisense.
 
+- Investigate spurious boxes in DDE Is Still Alive.
+
 - Add date filter to GenerateToC.ps1
