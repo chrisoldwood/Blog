@@ -7,3 +7,7 @@
 - Tweak Jekyll layout to fix heading (see https://github.com/orgs/community/discussions/23460).
 
 - Fix-up links to my own blog posts.
+
+- Investigate failed monospace matching in Perils of Intellisense.
+
+- Add date filter to GenerateToC.ps1
