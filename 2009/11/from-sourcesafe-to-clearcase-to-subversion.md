@@ -1,0 +1,52 @@
+# From SourceSafe to ClearCase to Subversion
+
+My latest contract sees me working with a different Version Control System, this time it’s Subversion. Quite how I’ve managed to avoid knowing anything about Subversion, given its prevalence within the Open Source community, is probably quite astounding. What’s more amusing is that it seems I’m joining the party just as everyone else is leaving - the cool kids are all at Git, Mercurial & Bazaar - Subversion seems to be _so_ last year. Mind you I’ve never used CVS either, so I have no idea of the problems Subversion was supposed to solve, and from what I understand it’s still growing within the Corporate sector, no doubt because it has reached a certain level of maturity and sits right between the other two VCS’s mentioned in the title.
+
+<u>My Background</u>
+
+I started out working at a company that used PVCS, and although I was vaguely aware of branching and merging and some of the other SCM activities it didn't really sink in as my head was swimming with so many other new Software Engineering concepts. It wasn’t until a few years into contracting and I had started using Microsoft’s Visual SourceSafe in a much larger team that some of the concepts started to make sense. In the late 90’s I began working at a company that used their own in-house VCS. Not unsurprisingly this was fairly simple and didn’t support even basic features like branching, merging and labelling. I (some would say foolishly) introduced them to SourceSafe, which due to the small team size was perfectly adequate, and it served the team well - I think it still does over a decade later. In contrast my next shift in company took me to a very large corporation, for which ClearCase was the tool of choice. It was using this mighty piece of Enterprise software that the concepts of baselines, branching, merging, labelling etc really took shape as my team was often working on 5 or 6 major development streams simultaneously. Yes it’s slow, but it’s object model and flexibility were so far in advance of SourceSafe that I couldn’t see why anyone would need anything else. Of course I wasn’t paying the licensing fees either :-) Still I know a fair few people that loathe ClearCase (especially UCM) and now I’m working with something more middle of the road like Subversion, I can see why…
+
+<u>Some Comparisons</u>
+
+There are probably hundreds of differences between these 3 products, and I’ve only spent a few weeks with Subversion, but that’s been enough to give me an idea of how the run-of-the-mill tasks work. So this list is really only the major points that have caught my attention, perhaps because they are radically different to the others.
+
+<u>1: Tools</u>
+
+The word visual in “Visual SourceSafe” pretty much sums up the target audience of VSS. It is integrated into Visual Studio and has a separate Explorer-like tool for manipulating the repository outside VS. There are some command line tools, but personally I’ve found them of little use; however I’ve never done any really serious automation with them to be fair. The ease with which you can do a recursive import makes light work of adding 3rd party libraries and is the one feature sorely missing from ClearCase.
+
+That said, ClearCase is nearly all things to all [wo]men. It has a GUI based Explorer-like tool which makes working with local copies very simple. It also has a plethora of other GUI and command line tools that allow you to manipulate and mine data such as version histories, merge paths etc, with some effort. Naturally it’s a complex product, but when you get your head around the object model and the query syntax it can perform some impressive feats – albeit slowly :-)
+
+Being Open Source, and knowing the Movements general attitude towards power and command-lines I wasn’t entirely sure what to expect from Subversion. I was faintly aware of TortoiseSVN but have had bad experiences with poorly written Shell Extensions* in the past - I disabled the ClearCase one due to similar issues. On the contrary it’s been pretty solid and a very different way of working with the repository than an Explorer-like view. Not that I need to use TortoiseSVN that much because AnkhSVN provides excellent Visual Studio integration.
+
+<u>2: Branching & Merging</u>
+
+Although I’ve worked with VSS for well over a decade and I’m aware that it supports branching, I’ve never actually done it in earnest. The main problem with SourceSafe is that it doesn’t support versioning of directories. This means that although you could label files and revert changes, you can’t do the same with folders, and you can’t use a label to recreate a previous release if there have been any deletions. The way I use VSS for my personal work, and how I’ve used it in the past within teams, is to effectively make _all_ changes on the trunk – no feature or release branches, period. Trying to grok branching using VSS as a tool is never get to get you far and I guess that’s why we never did it :-) Merging was limited to those occasions when more than one developer had edited the same file on the trunk simultaneously, which was rare and changes hardly over overlapped.
+
+ClearCase, for me, follows the most logical model. Each file/folder (or ‘Element’ as ClearCase calls it) can have many versions on many branches. What distinguishes it from the typical Subversion model though is that each file in your workspace can be selected from multiple different branches. When you define your workspace you are effectively selecting the version for _each_ file and folder, using branches as common grouping mechanism, i.e. the branch is a selection mechanism _within_ the workspace, not the _defining_ characteristic of the workspace, although that is often the desired effect. However, it’s not branches, but labels, that provide the most common baseline definition for a development stream – and those labels could tag versions from many branches. Subversion talks about cheap copies when branching, but ClearCase avoids even those cheap copies. Of course there is a trade-off and I guess it is in the workspace definition.
+
+I didn’t get the Subversion model at first – just creating a folder with the name of the branch under another folder called ‘branches’ and then copying the files into that folder - it sounds bizarre after using ClearCase. The magic of course is in the implementation. The copies are really just symbolic links to revisions of the original files. Labelling is a similar affair, it’s just a convention that you don’t modify the files after copying. The consequence seems to be that merging is conceptually more complex because you have to do two different actions depending on whether you’re refreshing your branch from the trunk or integrating back again – ClearCase doesn’t care either way.
+
+<u>3: Local Workspaces</u>
+
+Not unsurprisingly SourceSafe again has the simplest model where you map folders in the repository to folders in your local file-system. Usually you just map the root and leave the subfolders to follow the same hierarchy, but if you’re using branches I guess you can map each branch to the same local folder for convenience. I don’t believe that you can have multiple workspaces on the same portion of repository because the mapping is stored in the configuration file which is _in_ the repository. SourceSafe also marks all files read-only by default meaning that you have to “check-out” the file before editing. In single-editor mode this locks the file, but for multi-editor mode it just remembers the version so that it can merge the file on “check-in” if required.
+
+ClearCase requires a similar check-out/check-in pattern to SourceSafe and write protects files as well. The consequence of this model though is that files you edit without ClearCase’s knowledge are deemed to be “Hijacked” and you have to resolve the issue either by checking-it-out or reverting the changes. Unlike VSS though you can have as many workspaces as you like, all with different configurations determined by a “Profile”. In reality, to ensure consistent views across developers and the build machine, you configure a Master Profile for each Branch (or Development Stream), and all your developers use that. There are two big problems with ClearCase views – the speed of updating and the lack of atomic commits when checking in multiple files.
+
+Once again Subversion makes a departure from the other two and does something different and I’m not sure yet whether I like it or not. A checkout in subversion is the creation of the entire workspace, and all files are writable by default. This means that Subversion determines what’s changed by just looking for files that have been modified. This removes the whole check-out palaver, but at the expensive of not being warned when someone else has edited a file and you need to refresh your workspace. My team has been checking-in and updating as frequently as possible which minimises this, but it has caused problems when AnkhSVN updates a Visual Studio project file and a merge conflict causes it not to load. The other thing I miss is the Explorer-like tool. The TortoiseSVN shell extension is nicer than the command line for many tasks, but it doesn’t feel quite as integrated as the VSS and ClearCase tools.
+
+<u>Conclusions</u>
+
+I use VSS at home for my personal archive (it has over 12 years of history in it) and it only has to support a team size of 1, which it just about copes with. But as I begin to understand more about The Software Development Process I want to try out techniques at home that I use at work, and for that something like Subversion (or more likely the modern cool tools like Git or Mercurial) would be a far better fit. And of course they’re free. But I still look back with fondness on my time using ClearCase, a behemoth of a version control system, but one which provides huge possibilities and great satisfaction when you finally ‘crack it’.
+
+
+
+[*I’ve tried some SourceSafe shell extensions in the past and they’ve often succeeded in locking up Explorer entirely when there are transient network issues with a LAN based repository. I’ve also experienced the same thing with ClearCase, often when the license server was misbehaving.]
+
+
+
+
+---
+Original: <https://chrisoldwood.blogspot.com/2009/11/from-sourcesafe-to-clearcase-to.html>\
+Copyright: Chris Oldwood 2009\
+Published: Sunday, 29 November 2009 at 22:10\
+Labels: tools, version control

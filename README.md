@@ -6,6 +6,16 @@ https://chrisoldwood.github.io/Blog.
 
 ### 2009
 
+* [From SourceSafe to ClearCase to Subversion](2009/11/from-sourcesafe-to-clearcase-to-subversion.md)
+* [C# + C++ + C++/CLI – Context Switch Hell](2009/11/csharp-cpp-cppcli-context-switch-hell.md)
+* [Adjusting to the C#/.Net Ecosystem](2009/11/adjusting-to-the-csharp-dotnet-ecosystem.md)
+* [Standard Method Name Verb Semantics](2009/11/standard-method-name-verb-semantics.md)
+* [My New Blogging Machine](2009/11/my-new-blogging-machine.md)
+* [Happy 21st/12th Anniversary](2009/11/happy-21st-12th-anniversary.md)
+* [A Chip Off the Old Block](2009/11/a-chip-off-the-old-block.md)
+* [Stack Overflow Dev Days – London](2009/10/stack-overflow-dev-days-london.md)
+* [DDE Is Still Alive & Kicking](2009/10/dde-is-still-alive-and-kicking.md)
+* [We Don’t Use IE6 Out of Choice](2009/10/we-dont-use-ie6-out-of-choice.md)
 * [The Perils of Intellisense](2009/09/the-perils-of-intellisense.md)
 * [Going Back to Work](2009/09/going-back-to-work.md)
 * [My First Published Articles](2009/07/my-first-published-articles.md)

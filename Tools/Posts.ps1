@@ -14,4 +14,13 @@ $Posts = @(
     @{ InputDate = '2009/07'; InputUrl='my-first-published-articles.html'; OutputDate = '2009/07'; OutputFile='my-first-published-articles.md' }
     @{ InputDate = '2009/09'; InputUrl='going-back-to-work.html'; OutputDate = '2009/09'; OutputFile='going-back-to-work.md' }
     @{ InputDate = '2009/09'; InputUrl='perils-of-intellisense.html'; OutputDate = '2009/09'; OutputFile='the-perils-of-intellisense.md' }
-)
+    @{ InputDate = '2009/10'; InputUrl='we-dont-use-ie6-out-of-choice.html'; OutputDate = '2009/10'; OutputFile='we-dont-use-ie6-out-of-choice.md' }
+    @{ InputDate = '2009/10'; InputUrl='dde-is-still-alive-kicking.html'; OutputDate = '2009/10'; OutputFile='dde-is-still-alive-and-kicking.md' }
+    @{ InputDate = '2009/10'; InputUrl='stack-overflow-dev-days-london.html'; OutputDate = '2009/10'; OutputFile='stack-overflow-dev-days-london.md' }
+    @{ InputDate = '2009/11'; InputUrl='chip-off-old-block.html'; OutputDate = '2009/11'; OutputFile='a-chip-off-the-old-block.md' }
+    @{ InputDate = '2009/11'; InputUrl='happy-21st12th-anniversary.html'; OutputDate = '2009/11'; OutputFile='happy-21st-12th-anniversary.md' }
+    @{ InputDate = '2009/11'; InputUrl='my-new-blogging-machine.html'; OutputDate = '2009/11'; OutputFile='my-new-blogging-machine.md' }
+    @{ InputDate = '2009/11'; InputUrl='standard-method-name-verb-semantics.html'; OutputDate = '2009/11'; OutputFile='standard-method-name-verb-semantics.md' }
+    @{ InputDate = '2009/11'; InputUrl='adjusting-to-cnet-ecosystem.html'; OutputDate = '2009/11'; OutputFile='adjusting-to-the-csharp-dotnet-ecosystem.md' }
+    @{ InputDate = '2009/11'; InputUrl='c-c-ccli-context-switch-hell.html'; OutputDate = '2009/11'; OutputFile='csharp-cpp-cppcli-context-switch-hell.md' }
+    @{ InputDate = '2009/11'; InputUrl='from-sourcesafe-to-clearcase-to.html'; OutputDate = '2009/11'; OutputFile='from-sourcesafe-to-clearcase-to-subversion.md' })

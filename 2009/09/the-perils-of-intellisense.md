@@ -37,7 +37,7 @@ I guess that I've forgotten something COM security related, perhaps I need to ca
 I stare at the code for ages trying to work out what to do next. I compare it line for line with the example code in the WMI SDK documentation. Only I don't. I've been skipping the 'trivial' initialisation code before the call to ConnectServer(). Finally I decide to double-check the CLSID for the Locator COM object and I spot a difference... It's not CLSID_WbemAdministrativeLocator in the example, it's CLSID_WbemLocator! I make the relevant code change...
 
 `IWbemServicesPtr services;`\
-`IWbemLocatorPtr locator(CLSID_WbemLocator);`\
+`IWbemLocatorPtr locator(CLSID_WbemLocator`\);
 
 I run the unit tests. Good, they still pass. I run my WMICmd tool, and bingo, it now works. I go back and try 'localhost' to prove to myself that I was obviously wrong with my assumption about having to use "." for a local query, and of course it also works.
 

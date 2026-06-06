@@ -36,7 +36,13 @@ function WriteContent([string] $content) {
 }
 
 function BodyToMarkdown([string] $body) {
+    $body = $body -replace '<h4>', '#### '
+    $body = $body -replace '</h4>', "`r`n`r`n"
+    $body = $body -replace '<h5>', '#### '
+    $body = $body -replace '</h5>', "`r`n`r`n"
     $body = $body -replace '<br>', "`r`n"
+    $body = $body -replace '</p>\s*', "`r`n`r`n"
+    $body = $body -replace '<p>', ''
 
     $body = $body -replace '</?strong>', '**'
     $body = $body -replace '</?em>', '_'
@@ -45,6 +51,7 @@ function BodyToMarkdown([string] $body) {
     $body = $body -replace '&amp;', '&'
     $body = $body -replace '&gt;', '>'
     $body = $body -replace '&lt;', '<'
+    $body = $body -replace '&nbsp;', ''
 
     $body = $body -replace '<ol>', "`r`n"
     $body = $body -replace '<li>', '- '
@@ -53,7 +60,8 @@ function BodyToMarkdown([string] $body) {
 
     # Handle monospaced text.
     $body = $body -replace '<span style="font-family:courier new;"></span>', '` `\'
-    $body = $body -replace '<span style="font-family:courier new;">(.+)(.*?)</span>', '`$1`\'
+    $body = $body -replace '<span style="font-family:courier new;">(.*?)</span>', '`$1`\'
+    $body = $body -replace '<font face="Courier New">(.*?)</font>', '`$1`\'
 
     # Ignore weird spans.
     $body = $body -replace '<span style="font-size:[+]0;">', ''
@@ -68,6 +76,10 @@ function BodyToMarkdown([string] $body) {
     $body = $body -replace '<span style="font-family:trebuchet ms;">', ''
     $body = $body -replace '<span style="font-family:verdana;">', ''
     $body = $body -replace '</span>', ''
+    $body = $body -replace '<font face="Trebuchet MS">', ''
+    $body = $body -replace '<font size="2" face="Trebuchet MS">', ''
+    $body = $body -replace '<font size="2">', ''
+    $body = $body -replace '</font>', ''
 
     # Remove trailing <div style="clear: both;"></div>
     $body = $body -replace '<div[^>]*>', ''
