@@ -1,3 +1,4 @@
+[Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSReviewUnusedParameter', 'AsConfig')]
 param (
     [Parameter(Mandatory=$true, Position=0)]
     [string] $URL,

@@ -1,3 +1,4 @@
+[Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseDeclaredVarsMoreThanAssignments', 'Posts')]
 $Posts = @(
     @{ InputDate = '2009/04'; InputUrl='apology-to-raymond-chen.html'; OutputDate = '2009/04'; OutputFile='an-apology-to-raymond-chen.md' }
     @{ InputDate = '2009/05'; InputUrl='who-is-accu.html'; OutputDate = '2009/05'; OutputFile='who-is-the-accu.md' }
@@ -23,4 +24,5 @@ $Posts = @(
     @{ InputDate = '2009/11'; InputUrl='standard-method-name-verb-semantics.html'; OutputDate = '2009/11'; OutputFile='standard-method-name-verb-semantics.md' }
     @{ InputDate = '2009/11'; InputUrl='adjusting-to-cnet-ecosystem.html'; OutputDate = '2009/11'; OutputFile='adjusting-to-the-csharp-dotnet-ecosystem.md' }
     @{ InputDate = '2009/11'; InputUrl='c-c-ccli-context-switch-hell.html'; OutputDate = '2009/11'; OutputFile='csharp-cpp-cppcli-context-switch-hell.md' }
-    @{ InputDate = '2009/11'; InputUrl='from-sourcesafe-to-clearcase-to.html'; OutputDate = '2009/11'; OutputFile='from-sourcesafe-to-clearcase-to-subversion.md' })
+    @{ InputDate = '2009/11'; InputUrl='from-sourcesafe-to-clearcase-to.html'; OutputDate = '2009/11'; OutputFile='from-sourcesafe-to-clearcase-to-subversion.md' }
+)

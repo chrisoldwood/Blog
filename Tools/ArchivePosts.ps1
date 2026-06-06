@@ -1,3 +1,4 @@
+[Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSReviewUnusedParameter', 'BaseURL')]
 param (
     [Parameter(Mandatory=$false)]
     [string] $BaseURL = 'https://chrisoldwood.blogspot.com',
