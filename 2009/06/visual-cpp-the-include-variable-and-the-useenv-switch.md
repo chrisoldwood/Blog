@@ -32,10 +32,10 @@ I haven't seen any clarification yet, but I suspect that the Visual Studio team 
 
 The real kicker though is that there is no obvious way of stopping Visual C++ from configuring the "External Dependencies" from the INCLUDE variable when using the /useenv command line switch! There is no EXTERNAL_DEPENDENCIES variable that I know of that would allow you to configure it appropriately (it does seem a very useful optimisation). In the end the hack Sergey came up with is really ugly :-) He found that if you modified the default paths, VS wouldn't interfere and inject the INCLUDE paths into it. So here are the instructions,
 
-- Open Visual C++ from the standard icon, NOT by invoking it with devenv /useenv or your script.
-- Open the "Tools ! Options" dialog and find the "External Dependencies" list.
-- Modify them by adding another dummy entry at the end. We just stuck the string "(null)" in there for want of something better.
-- Close Visual C++ and re-open it with your script and check that the "External Dependencies" list has not been hijacked.
+* Open Visual C++ from the standard icon, NOT by invoking it with devenv /useenv or your script.
+* Open the "Tools ! Options" dialog and find the "External Dependencies" list.
+* Modify them by adding another dummy entry at the end. We just stuck the string "(null)" in there for want of something better.
+* Close Visual C++ and re-open it with your script and check that the "External Dependencies" list has not been hijacked.
 
 At the time we hit this (06/2008) there was only one post I could find that seemed similar to our problem,
 

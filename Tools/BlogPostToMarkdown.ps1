@@ -54,9 +54,11 @@ function BodyToMarkdown([string] $body) {
     $body = $body -replace '&nbsp;', ''
 
     $body = $body -replace '<ol>', "`r`n"
-    $body = $body -replace '<li>', '- '
-    $body = $body -replace '</li>', "`r`n"
-    $body = $body -replace '</ol>', "`r`n"
+    $body = $body -replace '<ul>', "`r`n"
+    $body = $body -replace '[ ]*<li>', '* '
+    $body = $body -replace '</li>[ ]*', "`r`n"
+    $body = $body -replace '</ol>[ ]*', "`r`n"
+    $body = $body -replace '</ul>[ ]*', "`r`n"
 
     # Handle monospaced text.
     $body = $body -replace '<span style="font-family:courier new;"></span>', '` `\'

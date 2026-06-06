@@ -22,15 +22,17 @@ As far as I could see it was a toss-up between exposing C++ code via extern “C
 
 The following few days coding were somewhat amusing as I context switched constantly between the three slightly different C based syntaxes of C#, C++ and C++/CLI. Each is so incredibly similar to the other that I don’t think I managed to write a single line of code 100% correctly first time :-). The following is a list of some of the subtle differences that I ran into:-
 
-<ul>   - C# uses the single keyword ‘foreach’ whereas in C++/CLI it’s separated into two as ‘for each’. 
-    - C++ and C# use the ‘new’ keyword whereas C++/CLI uses ‘gcnew’. 
-    - In C++ and C++/CLI you can invoke a no argument ctor without parenthesis, but in C# you have to provide them. 
-    - When qualifying types with the enclosing class or namespace you use ‘::’ in C++ & C++/CLI, but just a ‘.’ in C# 
-    - C# uses a ‘.’ to invoke methods, but C++/CLI follows C++ and uses the ‘->’ pointer syntax. This is made worse by the use of the term ‘reference type’ to refer to a type that you invoke with pointer, not reference syntax in C++/CLI! 
-    - Forgetting the ^ either on the collection contained type, or the collection type itself. 
-    - The _empty_ reference type is called ‘null’ in C#, ‘nullptr’ in C++/CLI and ‘NULL’ in plain C++. 
-    - Conditional compilation uses ‘#ifdef’ or ‘#if defined’ in C++ and C++/CLI whereas C# uses the simpler ‘#if’ 
- </ul>  It only amounted to a couple hundred lines of code in total across all three languages, but I felt like I spent more time staring at the compiler output window than the text editor…
+
+* C# uses the single keyword ‘foreach’ whereas in C++/CLI it’s separated into two as ‘for each’. 
+* C++ and C# use the ‘new’ keyword whereas C++/CLI uses ‘gcnew’. 
+* In C++ and C++/CLI you can invoke a no argument ctor without parenthesis, but in C# you have to provide them. 
+* When qualifying types with the enclosing class or namespace you use ‘::’ in C++ & C++/CLI, but just a ‘.’ in C# 
+* C# uses a ‘.’ to invoke methods, but C++/CLI follows C++ and uses the ‘->’ pointer syntax. This is made worse by the use of the term ‘reference type’ to refer to a type that you invoke with pointer, not reference syntax in C++/CLI! 
+* Forgetting the ^ either on the collection contained type, or the collection type itself. 
+* The _empty_ reference type is called ‘null’ in C#, ‘nullptr’ in C++/CLI and ‘NULL’ in plain C++. 
+* Conditional compilation uses ‘#ifdef’ or ‘#if defined’ in C++ and C++/CLI whereas C# uses the simpler ‘#if’ 
+
+It only amounted to a couple hundred lines of code in total across all three languages, but I felt like I spent more time staring at the compiler output window than the text editor…
 
 
 ---

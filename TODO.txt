@@ -1,7 +1,5 @@
 - Handle images.
 
-- Handle ordered and unordered lists properly.
-
 - Add name and blog title on each page.
 
 - Tweak Jekyll layout to fix heading (see https://github.com/orgs/community/discussions/23460).
