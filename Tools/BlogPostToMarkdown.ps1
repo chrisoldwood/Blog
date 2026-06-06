@@ -36,6 +36,8 @@ function WriteContent([string] $content) {
 }
 
 function BodyToMarkdown([string] $body) {
+    $body = $body -replace "(?<!\r)\n", "`r`n"
+
     $body = $body -replace '<h4>', '#### '
     $body = $body -replace '</h4>', "`r`n`r`n"
     $body = $body -replace '<h5>', '#### '
