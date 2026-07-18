@@ -63,6 +63,8 @@ function BodyToMarkdown([string] $body) {
     $body = $body -replace '</ol>[ ]*', "`r`n"
     $body = $body -replace '</ul>[ ]*', "`r`n"
 
+    $body = $body -replace '\|', '\|'
+
     # Handle monospaced text.
     $body = $body -replace '<span style="font-family:courier new;"></span>', '` `\'
     $body = $body -replace '<span style="font-family:courier new;">(.*?)</span>', '`$1`\'
