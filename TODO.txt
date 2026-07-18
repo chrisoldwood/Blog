@@ -6,6 +6,6 @@
 
 - Fix-up links to my own blog posts.
 
-- Investigate failed monospace matching in Perils of Intellisense.
-
 - Investigate spurious boxes in DDE Is Still Alive.
+
+- Find a way to properly handle monospaced blocks that span newlines, e.g. Default Size and Index Type.

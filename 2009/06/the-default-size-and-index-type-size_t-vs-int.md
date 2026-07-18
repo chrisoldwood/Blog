@@ -6,21 +6,25 @@ Unfortunately this habit got carried over into [my own framework](http://chrisol
 
 All of a sudden the compiler was constantly complaining about signed/unsigned comparisons which would ripple through my code as loops where changed from,
 
-<span style="font-family:courier new;">for (**int** i = 0; i < v.**Size**(); ++i)
+```
+for (**int** i = 0; i < v.**Size**(); ++i)```
 
 initially to,
 
-<span style="font-family:courier new;">for (**int** i = 0; i < v.**size**(); ++i)
+```
+for (**int** i = 0; i < v.**size**(); ++i)```
 
 and finally to,
 
-<span style="font-family:courier new;">for (**size_t** i = 0; i != v.**size**(); ++i)
+```
+for (**size_t** i = 0; i != v.**size**(); ++i)```
 
 (Changing the code structure to use iterators instead - the correct solution - was going to be an exercise for another day.)
 
 I realised that a large part of my codebase was int-based instead of size_t-based and the number of uses of static_cast was growing and making the code even uglier so I decided to bite the bullet and go size_t across the board. The entire codebase isn't massive (160,000 LOC or 45,000 SLOC according to the excellent [Source Monitor](http://www.campwoodsw.com/sourcemonitor.html)) and it took a few train journeys but it felt good. However one subsequent annoyance was with the comparisons to CB_ERR etc as they are just #define's for -1 so I followed the STL string type (which returns -1 as a result for some of the find() methods) and declared a global constant,
 
-<span style="font-family:courier new;">namespace Core
+```
+namespace Core```
 {
 static const size_t npos = static_cast<size_t>(-1);
 }

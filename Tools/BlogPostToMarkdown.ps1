@@ -66,6 +66,8 @@ function BodyToMarkdown([string] $body) {
     # Handle monospaced text.
     $body = $body -replace '<span style="font-family:courier new;"></span>', '` `\'
     $body = $body -replace '<span style="font-family:courier new;">(.*?)</span>', '`$1`\'
+    # Note: we can't match monospaced blocks that span newlines, so just handle the first line for now.
+    $body = $body -replace '<span style="font-family:courier new;">(.*)', ('```' + "`r`n" + '$1' + '```')
     $body = $body -replace '<font face="Courier New">(.*?)</font>', '`$1`\'
 
     # Ignore weird spans.
