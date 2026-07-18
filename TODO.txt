@@ -7,3 +7,5 @@
 - Fix-up links to my own blog posts.
 
 - Find a way to properly handle monospaced blocks that span newlines, e.g. Default Size and Index Type.
+
+- Fix-up C++ template code and tags not correctly escaped when published, e.g. Perils of Intellisense and VC++ Project Compare.
