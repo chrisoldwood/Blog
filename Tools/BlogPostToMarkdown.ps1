@@ -76,6 +76,7 @@ function BodyToMarkdown([string] $body) {
     $body = $body -replace '<span style="font-size:[+]0;">', ''
     $body = $body -replace '<span class="blsp-spelling-error" id="SPELLING_ERROR_[0-9]+">', ''
     $body = $body -replace '<span class="blsp-spelling-corrected" id="SPELLING_ERROR_[0-9]+">', ''
+    $body = $body -replace '<span id="btAsinTitle">', ''
 
     # Remove coloured text.
     $body = $body -replace '<span style="color:#[0-9a-fA-F]+;">', ''
