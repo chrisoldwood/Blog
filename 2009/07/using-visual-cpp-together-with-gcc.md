@@ -1,4 +1,4 @@
-# Using Visual C++ Together With GCC - Some Alternatives
+## Using Visual C++ Together With GCC - Some Alternatives
 
 [My last post](http://chrisoldwood.blogspot.com/2009/07/gcc-for-visually-c-impaired.html) described how I have started using GCC 4.4 to compile my codebase so that I gain a little more portability, but more importantly I get some extra static code analysis without spanking my wallet. My [Heath Robinson](http://en.wikipedia.org/wiki/W._Heath_Robinson)-esque solution involves using the free [Code::Blocks](http://www.codeblocks.org/) IDE as it can import Visual C++ projects and solutions with minimal fuss, they are easy to maintain, and it's only an extra .cbp and .workspace checked into the SCM repository - so it's not messy.
 

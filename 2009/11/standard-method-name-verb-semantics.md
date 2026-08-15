@@ -1,4 +1,4 @@
-# Standard Method Name Verb Semantics
+## Standard Method Name Verb Semantics
 
 Something that I’ve always taken for granted when programming is that certain verbs imply certain behaviours. I thought it would be useful to find a set of these on the web and link to it on our development wiki, as although I think it is common sense to native speakers, that is not true of team members for which English is a second language. However I’m struggling to track one down. I’ve seen plenty of posts about the format of interface, class, method and variable names, but not one that attempts to list the expected semantics of the really common verbs we use like get, create and find. To date I’ve only come across the [PowerShell documentation](http://msdn.microsoft.com/en-us/library/ms714428(VS.85,loband).aspx) as they’ve always made a concerted effort to try and standardise both the format of their commands:- verb-followed-by-noun, and also the semantics of the most common verbs.
 

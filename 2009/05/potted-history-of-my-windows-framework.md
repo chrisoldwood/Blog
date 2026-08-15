@@ -1,4 +1,4 @@
-# A Potted History of My Windows Framework
+## A Potted History of My Windows Framework
 
 I thought that before leaping into a few posts about my experiences porting my [Windows Framework](http://www.cix.co.uk/~gort/win32.htm#WCL) to 64-bit Windows and GCC that I would spend a few minutes explaining how it has come to be the way it is. If you've looked at the source code to my various libraries you'll see a mixture of Hungarian & Java'ish notations, plus some MFC'isms and two different comment styles. Some parts of the framework are very old and as I only spend part of my free time on it, it is in a way, treated very similarly to commercial code - new features often come first and consequently it has accrued a significant level of [Technical Debt](http://c2.com/cgi/wiki?TechnicalDebt).
 

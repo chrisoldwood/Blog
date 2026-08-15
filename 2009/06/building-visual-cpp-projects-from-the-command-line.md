@@ -1,4 +1,4 @@
-# Building Visual C++ Projects From the Command Line
+## Building Visual C++ Projects From the Command Line
 
 As a developer biased towards Windows applications I find that both as a professional and a hobbyist that Visual C++ is my day-to-day IDE. I still use VC++ 7.1 (aka VS2003) for my [personal work](http://www.cix.co.uk/~gort/win32.htm) as I ship source code as well as binaries and it's easier to upgrade projects and solutions to later editions of Visual C++ for compatability testing than to go backwards. With 6 class libraries (+ unit tests) and 12 applications to build, manually launching the solutions and interacting with the GUI is just tedious and obviously error prone. But a common question on the forums is whether it is possible to build projects using Visual C++ from the command line - sometimes I wonder if people take the "Visual" in Visual C++ too literally :-)
 

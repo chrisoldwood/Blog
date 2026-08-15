@@ -1,4 +1,4 @@
-# GCC for the Visually C++ Impaired
+## GCC for the Visually C++ Impaired
 
 At this years [ACCU conference](http://accu.org/index.php/conferences/accu_conference_2009) Steve Love gave a talk titled [Why Portable Code?](http://accu.org/index.php/conferences/accu_conference_2009/accu2009_sessions#Why%20Portable%20Code?). It covered far more than just toolchains and platforms, but it reminded me of a previous chat I had with Steve about portability after one of the recent ACCU London gatherings. I've always liked the idea of writing truly portable code, but quite frankly in the corporate waters where I swim Visual C++ is The Big Fish and any ideas about using alternate toolchains to satisfy personal desires around "writing quality code" would be seen as frivolous - irrespective of whether it has long term benefits or not.
 

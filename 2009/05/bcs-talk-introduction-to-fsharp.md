@@ -1,4 +1,4 @@
-# BCS Talk - An Introduction to F#
+## BCS Talk - An Introduction to F#
 
 Last night I attended a BCS talk for the [Advanced Programming Specialist Group](http://www.bcs.org/server.php?show=nav.9813) by Don Syme of Microsoft Research about F#, a new language addition to the Visual Studio family as of VS2010, but also available as a separate download for VS2008. F# is a Functional Programming language at heart, but also has the ability to support both OO and traditional imperative styles as well, which is hugely important for interop with the other .Net languages. Don is the designer of F#, and although I went to [Oliver Sturm's](http://accu.org/index.php/conferences/accu_conference_2009/accu2009_speakers) ACCU 2009 conference session [Functional Programming in F#](http://accu.org/index.php/conferences/accu_conference_2009/accu2009_sessions#Functional), I felt getting the lowdown on F# straight from the horses mouth was too good to miss. Oh yeah and a trip to the pub after to chat with fellow BCS members is always a worthy pursuit.
 

@@ -1,4 +1,4 @@
-# Who is the ACCU?
+## Who is the ACCU?
 
 Some diligent readers may have noticed that I described Matthew Wilson as "a fellow ACCU member" and are wandering what the ACCU is. Well it's not some kind of secret religious cult - on the contrary they also allow mere mortals like me and you to join! Rather than screw up the possibility of recruiting new members by trying to succinctly describe what the ACCU is about I'll leave it to the front page of the ACCU website ([http://accu.org/](http://accu.org/)):-
 

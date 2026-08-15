@@ -1,4 +1,4 @@
-# The Default 'Size' & 'Index' Type: size_t vs int
+## The Default 'Size' & 'Index' Type: size_t vs int
 
 I started out writing applications in C on 16-bit Windows. The company I worked for favoured using the Windows SDK functions instead of the C-Runtime, so for example I would use lstrlen() instead of strlen(). Unfortunately, the Windows SDK is biased towards using int instead of size_t for parameters and return values that represent counts and indices. As I moved into working on MFC based applications the habit continued as MFC has it's own container types, such as CArray, which also favoured int, as does the popular common controls, like the CListCtrl. The final bias towards int was the use of -1 as an error code when using controls such as the combo and listboxes through constants such as CB_ERR and LB_ERR.
 

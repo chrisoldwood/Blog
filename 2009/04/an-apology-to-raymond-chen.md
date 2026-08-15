@@ -1,4 +1,4 @@
-# An apology to Raymond Chen
+## An apology to Raymond Chen
 
 There really wasn't any other choice for my blog name - how could I miss out on the opportunity for such a bad pun :-) Raymond Chen's "The Old New Thing" [http://blogs.msdn.com/oldnewthing](http://blogs.msdn.com/oldnewthing) was the first blog I ever started reading and is still the second blog I read each day (after "The Daily WTF" [http://thedailywtf.com](http://thedailywtf.com/) - I need to get a daily sanity check first).
 

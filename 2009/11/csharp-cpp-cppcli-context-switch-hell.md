@@ -1,4 +1,4 @@
-# C# + C++ + C++/CLI – Context Switch Hell
+## C# + C++ + C++/CLI – Context Switch Hell
 
 During the last week I’ve been doing some interop development at work. As you might expect from a financial institution the core analytics are written in C++ which is awkward for my team as our system is entirely C# based. Fortunately I got the chance to decide how we were going to communicate with the C++ library. Although new to C# I am aware of the various interop mechanisms available and went through them one-by-one to see which was the best fit. The C++ library only exposes a couple of functions and those only take an argument or two which take the form of a custom type that’s not a million miles away from a DataSet. Luckily there was already a Wrapper Facade available for this type so it really just came down to what was the easiest way to marshal this structure and deal with any exceptions.
 

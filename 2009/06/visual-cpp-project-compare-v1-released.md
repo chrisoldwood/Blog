@@ -1,4 +1,4 @@
-# Visual C++ Project Compare v1.0 Released
+## Visual C++ Project Compare v1.0 Released
 
 I've finally got around to releasing v1.0 of my tool for comparing Visual C++ project files to highlight inconsistencies in the settings between builds or other related projects. It's been in Beta since Xmas last year and the only change was to add the missing <Configuration> <configuration>attributes to the comparison as it didn't show up mismatched "CharacterSet" settings for example.</configuration>
 

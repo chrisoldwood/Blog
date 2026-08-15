@@ -98,7 +98,7 @@ function BodyToMarkdown([string] $body) {
     return $body
 }
 
-WriteContent "# $title"
+WriteContent "## $title"
 WriteContent ''
 WriteContent (BodyToMarkdown $body)
 WriteContent '---'

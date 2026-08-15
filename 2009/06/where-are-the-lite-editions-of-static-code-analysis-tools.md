@@ -1,4 +1,4 @@
-# Where Are the "Lite" Editions of Static Code Analysis Tools?
+## Where Are the "Lite" Editions of Static Code Analysis Tools?
 
 When I started out, the compiler I was using was set to build on warning level 2 (it was MS C600) which pretty much just told you if your code was well formed or not, and that was all I cared about then. Fortunately whilst working there the company discovered [Writing Solid Code by Steve Maguire](http://c2.com/cgi/wiki/wiki?WritingSolidCode) along with [Code Complete by SteveMcConnell](http://c2.com/cgi/wiki/wiki?CodeComplete). One of the practices Steve Maguire suggests is cranking the diagnostic level up on your tools to maximum and leaving it there - pretty much a best practice these days. The net effect of this is to enable the static code analysis within the compiler to highlight your 'valid', but potentially dubious code, giving you a chance to fix it before it becomes a bona fide bug. Yes, sometimes it gets it wrong, but there is nearly always a way to rewrite the code to silence the compiler (preferable) or a sledgehammer in the form of a pragma to disable the warning for a small section of code.
 

@@ -1,4 +1,4 @@
-# Stack Overflow Dev Days – London
+## Stack Overflow Dev Days – London
 
 On Wednesday I took a day off to go to the London venue of the Stack Overflow Dev Days tour. I wasn't entirely sure what to expect even up to the moment I arrived as I signed up without the faintest idea of what anyway was speaking about, and more importantly whether any of it would be relevant to my day-to-day work as a self-confessed C++/C# server-side kind of guy. Frankly I didn't care, for me it was going to be a day of meeting new friends, old friends (from the ACCU), and generally soaking up what's new and cool in the world of Software Development -C++ and faceless servers are presumably not cool.
 

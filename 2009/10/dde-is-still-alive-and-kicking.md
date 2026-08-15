@@ -1,4 +1,4 @@
-# DDE Is Still Alive & Kicking
+## DDE Is Still Alive & Kicking
 
 Dynamic Data Exchange (DDE) is an ancient inter-process communication (IPC) mechanism carried over from the 16-bit Windows days. Post millennium Windows programmers are probably more used to a diet of COM, but there still seems to be life in the old dog yet. Maybe there are less people around to answer questions on DDE, or perhaps the other old timers are ignoring them in the hope they'll go away because I seem to have had more emails on the subject this year than ever. 
 

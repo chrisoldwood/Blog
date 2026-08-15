@@ -1,4 +1,4 @@
-# Visual C++, the INCLUDE variable and the /USEENV switch
+## Visual C++, the INCLUDE variable and the /USEENV switch
 
 Back on my last contract I ported the codebase from VS2003 (VC++ 7.1) to VS2005 (VC++ 8.0). The port was pretty easy, but is wasn't until we started developing with VS2005 that we ran into a really nasty issue.
 

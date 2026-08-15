@@ -1,4 +1,4 @@
-# Going Back to Work
+## Going Back to Work
 
 Back in March I made the decision not to renew my contract for a 4th year and instead to take some time off. After discussing my financial situation with my Accountant (aka wife) I found I could easily take 4 months off, but probably longer if I sent her out to work more :-) In the end it's been 6 months and I feel thoroughly refreshed and ready to dive back into working life. So did I manage to achieve all that I had planned?
 

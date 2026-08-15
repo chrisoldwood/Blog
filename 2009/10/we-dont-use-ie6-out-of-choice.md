@@ -1,4 +1,4 @@
-# We Don’t Use IE6 Out of Choice
+## We Don’t Use IE6 Out of Choice
 
 Whilst on site the other day I found myself wanting to check out the [NHibernate Profiler](http://www.nhprof.com) website. When I arrived at the homepage I was greeted with a modal iframe that pointed out that I was using that old legacy browser we all love to hate – Internet Explorer 6.
 

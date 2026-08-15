@@ -1,4 +1,4 @@
-# Happy 21st/12th Anniversary
+## Happy 21st/12th Anniversary
 
 This week marks a palindromic moment in my relationship with my wife. On the one hand we have been married for 12 years, as of Monday. But we've been together for much longer, 21 years as of today. As happens each year, my wife says Happy Anniversary on the 1st, and yet I'm still waiting for the 5th because to me that is our spiritual anniversary. This of course has nothing to do with my complete inability to remember names or dates; obscure numbers like hex addresses and error codes - no problem, but birthdays and appointments - no chance.
 

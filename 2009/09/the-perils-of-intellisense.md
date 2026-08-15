@@ -1,4 +1,4 @@
-# The Perils of Intellisense
+## The Perils of Intellisense
 
 Work on my WMI library has been a little erratic during my recent time off, but I came across a bug recently which I lay squarely at the door of Intellisense. Of course, it's really a case of user error, but Intellisense lulls you into a false sense of security...
 

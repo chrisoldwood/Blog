@@ -1,4 +1,4 @@
-# My New Blogging Machine
+## My New Blogging Machine
 
 Much as I love my dear Dell XPS 1200 - it’s a lovely laptop to do development on – it’s still a little too heavy to just slip into my rucksack and carry around on the commute, even at under 2 Kg. And, given that I’m trying to make a concerted effort to do a little more blogging to improve those English skills I thought I’d check out the current range of netbooks.
 
