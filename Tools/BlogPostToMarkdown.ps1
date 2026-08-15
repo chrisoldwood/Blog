@@ -66,11 +66,16 @@ function BodyToMarkdown([string] $body) {
     $body = $body -replace '\|', '\|'
 
     # Handle monospaced text.
-    $body = $body -replace '<span style="font-family:courier new;"></span>', '` `\'
-    $body = $body -replace '<span style="font-family:courier new;">(.*?)</span>', '`$1`\'
-    # Note: we can't match monospaced blocks that span newlines, so just handle the first line for now.
-    $body = $body -replace '<span style="font-family:courier new;">(.*)', ('```' + "`r`n" + '$1' + '```')
+    $body = $body -replace '<span style="font-family:[ ]*courier new[;]?"></span>', '` `\'
+    $body = $body -replace '<span style="font-family:[ ]*courier new[;]?">(.*?)</span>', '`$1`\'
     $body = $body -replace '<font face="Courier New">(.*?)</font>', '`$1`\'
+    # Note: we can't match monospaced blocks that span newlines, so just handle the first line for now.
+    $body = $body -replace '<span style="font-family:[ ]*courier new[;]?">(.*)', ('```' + "`r`n" + '$1' + '```')
+    $body = $body -replace '<font face="Courier New">(.*)', ('```' + "`r`n" + '$1' + '```')
+
+    # Handle quoted text.
+    $body = $body -replace '<blockquote>(.*)', '> $1'
+    $body = $body -replace '</blockquote>', ''
 
     # Ignore weird spans.
     $body = $body -replace '<span style="font-size:[+]0;">', ''
@@ -83,10 +88,10 @@ function BodyToMarkdown([string] $body) {
 
     # Remove default text style.
     $body = $body -replace '<span>', ''
-    $body = $body -replace '<span style="font-family:trebuchet ms;">', ''
-    $body = $body -replace '<span style="font-family:verdana;">', ''
+    $body = $body -replace '<span style="font-family:[ ]*(trebuchet ms|verdana)[;]?">', ''
+    $body = $body -replace '<span style="mso-ansi-language: en-gb" lang="EN-GB">', ''
     $body = $body -replace '</span>', ''
-    $body = $body -replace '<font face="Trebuchet MS">', ''
+    $body = $body -replace '<font face="(Trebuchet MS|Verdana)">', ''
     $body = $body -replace '<font size="2" face="Trebuchet MS">', ''
     $body = $body -replace '<font size="2">', ''
     $body = $body -replace '</font>', ''
