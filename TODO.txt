@@ -1,9 +1,5 @@
 - Handle images.
 
-- Add name and blog title on each page.
-
-- Tweak Jekyll layout to fix heading (see https://github.com/orgs/community/discussions/23460).
-
 - Fix-up links to my own blog posts.
 
 - Find a way to properly handle monospaced blocks that span newlines, e.g. Default Size and Index Type.
