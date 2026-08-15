@@ -1,4 +1,4 @@
-# From SourceSafe to ClearCase to Subversion
+## From SourceSafe to ClearCase to Subversion
 
 My latest contract sees me working with a different Version Control System, this time it’s Subversion. Quite how I’ve managed to avoid knowing anything about Subversion, given its prevalence within the Open Source community, is probably quite astounding. What’s more amusing is that it seems I’m joining the party just as everyone else is leaving - the cool kids are all at Git, Mercurial & Bazaar - Subversion seems to be _so_ last year. Mind you I’ve never used CVS either, so I have no idea of the problems Subversion was supposed to solve, and from what I understand it’s still growing within the Corporate sector, no doubt because it has reached a certain level of maturity and sits right between the other two VCS’s mentioned in the title.
 
