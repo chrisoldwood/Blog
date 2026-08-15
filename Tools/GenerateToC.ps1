@@ -36,6 +36,6 @@ $Posts | where { InDateRange $_.OutputDate $FromDate $ToDate } | Reverse | forea
     }
 
     $outputPath = "$($_.OutputDate)/$($_.OutputFile)"
-    $title = (Get-Content $outputPath | select -First 1) -replace '^#\s*',''
+    $title = (Get-Content $outputPath | select -First 1) -replace '^[#]+\s*',''
     "* [$title]($outputPath)"
 }
