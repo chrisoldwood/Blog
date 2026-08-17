@@ -61,4 +61,7 @@ $Posts = @(
     @{ InputDate = '2010/11'; InputUrl='reacquainting-myself-with-sed-awk.html'; OutputDate = '2010/11'; OutputFile='reacquainting-myself-with-sed-and-awk.md' }
     @{ InputDate = '2010/11'; InputUrl='exception-safe-by-design.html'; OutputDate = '2010/11'; OutputFile='exception-safe-by-design.md' }
 
+    @{ InputDate = '2026/01'; InputUrl='the-case-of-disappearing-app.html'; OutputDate = '2026/01'; OutputFile='the-case-of-the-disappearing-app.md' }
+    @{ InputDate = '2026/02'; InputUrl='the-illusion-of-one-time-set-up.html'; OutputDate = '2026/02'; OutputFile='the-illusion-of-one-time-set-up.md' }
+
 )

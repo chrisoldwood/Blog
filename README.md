@@ -6,6 +6,9 @@ at <https://chrisoldwood.github.io/Blog>.
 
 ### 2026
 
+* [The Illusion of a One-Time Set-Up](2026/02/the-illusion-of-one-time-set-up.md)
+* [The Case of the Disappearing App](2026/01/the-case-of-the-disappearing-app.md)
+
 ### 2025
 
 ### 2024

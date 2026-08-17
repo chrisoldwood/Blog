@@ -91,7 +91,7 @@ function BodyToMarkdown([string] $body) {
     $body = $body -replace '<span style="font-family:[ ]*(trebuchet ms|verdana)[;]?">', ''
     $body = $body -replace '<span style="mso-ansi-language: en-gb" lang="EN-GB">', ''
     $body = $body -replace '</span>', ''
-    $body = $body -replace '<font face="(Trebuchet MS|Verdana)">', ''
+    $body = $body -replace '<font face="(Georgia|Trebuchet MS|Verdana)">', ''
     $body = $body -replace '<font size="2" face="Trebuchet MS">', ''
     $body = $body -replace '<font size="2">', ''
     $body = $body -replace '</font>', ''
