@@ -61,6 +61,10 @@ $Posts = @(
     @{ InputDate = '2010/11'; InputUrl='reacquainting-myself-with-sed-awk.html'; OutputDate = '2010/11'; OutputFile='reacquainting-myself-with-sed-and-awk.md' }
     @{ InputDate = '2010/11'; InputUrl='exception-safe-by-design.html'; OutputDate = '2010/11'; OutputFile='exception-safe-by-design.md' }
 
+    @{ InputDate = '2025/02'; InputUrl='how-do-i-test-this.html'; OutputDate = '2025/02'; OutputFile='how-do-i-test-this.md' }
+    @{ InputDate = '2025/04'; InputUrl='a-decade-of-lightning-talks-with.html'; OutputDate = '2025/04'; OutputFile='a-decade-of-lightning-talks-with-programming-one-liners.md' }
+    @{ InputDate = '2025/05'; InputUrl='codurance-ai-hackathon.html'; OutputDate = '2025/05'; OutputFile='codurance-ai-hackathon.md' }
+
     @{ InputDate = '2026/01'; InputUrl='the-case-of-disappearing-app.html'; OutputDate = '2026/01'; OutputFile='the-case-of-the-disappearing-app.md' }
     @{ InputDate = '2026/02'; InputUrl='the-illusion-of-one-time-set-up.html'; OutputDate = '2026/02'; OutputFile='the-illusion-of-one-time-set-up.md' }
 

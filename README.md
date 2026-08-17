@@ -11,6 +11,10 @@ at <https://chrisoldwood.github.io/Blog>.
 
 ### 2025
 
+* [Codurance AI Hackathon](2025/05/codurance-ai-hackathon.md)
+* [A Decade of Lightning Talks with Programming One-Liners](2025/04/a-decade-of-lightning-talks-with-programming-one-liners.md)
+* [How Do I Test This?](2025/02/how-do-i-test-this.md)
+
 ### 2024
 
 ### 2023
