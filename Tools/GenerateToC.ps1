@@ -32,7 +32,7 @@ $Posts | where { InDateRange $_.OutputDate $FromDate $ToDate } | Reverse | forea
     $year = $_.InputDate.Substring(0, 4)
     if ($section -ne $year) {
         $section = $year
-        "### $section`n"
+        "`n### $section`n"
     }
 
     $outputPath = "$($_.OutputDate)/$($_.OutputFile)"
