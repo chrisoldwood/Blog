@@ -19,7 +19,11 @@ at <https://chrisoldwood.github.io/Blog>.
 
 ### 2023
 
+* [Unpacking Code Ownership](2023/10/unpacking-code-ownership.md)
+
 ### 2022
+
+* [WMI Performance Anomaly: Querying the Number of CPU Cores](2022/10/wmi-performance-anomaly-querying-number-of-cpu-cores.md)
 
 ### 2021
 
