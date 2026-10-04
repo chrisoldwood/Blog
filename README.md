@@ -17,6 +17,13 @@ at <https://chrisoldwood.github.io/Blog>.
 
 ### 2024
 
+* [Unravelling Conflict](2024/12/unravelling-conflict.md)
+* [Using CoPilot-Like Tools is Not Pairing](2024/11/using-copilot-like-tools-is-not-pairing.md)
+* [Crafters Meetup: Architecture Kata](2024/10/crafters-meetup-architecture-kata.md)
+* [Cambridge Software Crafters Meetup](2024/09/cambridge-software-crafters-meetup.md)
+* [Naming Functions: When Intent and Implementation Differ](2024/04/naming-functions-when-intent-and-implementation-differ.md)
+* [Our Star Baker](2024/02/our-star-baker.md)
+
 ### 2023
 
 * [Unpacking Code Ownership](2023/10/unpacking-code-ownership.md)

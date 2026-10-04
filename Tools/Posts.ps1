@@ -65,6 +65,13 @@ $Posts = @(
 
     @{ InputDate = '2023/10'; InputUrl='unpacking-code-ownership.html'; OutputDate = '2023/10'; OutputFile='unpacking-code-ownership.md' }
 
+    @{ InputDate = '2024/02'; InputUrl='our-star-baker.html'; OutputDate = '2024/02'; OutputFile='our-star-baker.md' }
+    @{ InputDate = '2024/04'; InputUrl='naming-functions-when-intent-and.html'; OutputDate = '2024/04'; OutputFile='naming-functions-when-intent-and-implementation-differ.md' }
+    @{ InputDate = '2024/09'; InputUrl='cambridge-software-crafters-meetup.html'; OutputDate = '2024/09'; OutputFile='cambridge-software-crafters-meetup.md' }
+    @{ InputDate = '2024/10'; InputUrl='crafters-meetup-architecture-kata.html'; OutputDate = '2024/10'; OutputFile='crafters-meetup-architecture-kata.md' }
+    @{ InputDate = '2024/11'; InputUrl='using-copilot-like-tools-is-not-pairing.html'; OutputDate = '2024/11'; OutputFile='using-copilot-like-tools-is-not-pairing.md' }
+    @{ InputDate = '2024/12'; InputUrl='unravelling-conflict.html'; OutputDate = '2024/12'; OutputFile='unravelling-conflict.md' }
+
     @{ InputDate = '2025/02'; InputUrl='how-do-i-test-this.html'; OutputDate = '2025/02'; OutputFile='how-do-i-test-this.md' }
     @{ InputDate = '2025/04'; InputUrl='a-decade-of-lightning-talks-with.html'; OutputDate = '2025/04'; OutputFile='a-decade-of-lightning-talks-with-programming-one-liners.md' }
     @{ InputDate = '2025/05'; InputUrl='codurance-ai-hackathon.html'; OutputDate = '2025/05'; OutputFile='codurance-ai-hackathon.md' }
